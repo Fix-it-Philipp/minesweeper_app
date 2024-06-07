@@ -28,7 +28,7 @@ public class Zelle {
         return anzahl;
     }
 
-    public Zelle[][] OpenAround(Zelle[][] spielfeld) {
+    private Zelle[][] OpenAround(Zelle[][] spielfeld) {
         // System.out.println("Aufruf OpenRound()");
         if (this.x > 0) spielfeld = spielfeld[this.x-1][this.y].setOpen(spielfeld);// Links
         if (this.x < spielfeld.length-1) spielfeld = spielfeld[this.x+1][this.y].setOpen(spielfeld);// Rechts
@@ -71,5 +71,4 @@ public class Zelle {
     public boolean isOpen() {
         return open;
     }
-
 }
